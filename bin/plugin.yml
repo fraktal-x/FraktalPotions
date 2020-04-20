@@ -1,0 +1,9 @@
+name: FraktalPotions
+description: FraktalPotions - the vanilla+ plugin!
+version: 0.1
+author: fraktalx
+api-version: 1.15
+
+prefix: FraktalPotions
+
+main: fraktalx.FraktalPotions.Main
