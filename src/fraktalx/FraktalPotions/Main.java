@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffectType;
@@ -14,7 +15,6 @@ public class Main extends JavaPlugin implements Listener{
 	//Material mat = Material.GLIS
 	Map<String, CustomPotion> recipes = new HashMap<String, CustomPotion>();
 	
-	public static String VERSION = "v1.0";
 	//type, duration, potency, name, colour, splash
 	CustomPotion CONFUSION = new CustomPotion(PotionEffectType.CONFUSION, 2400, 1, "Potion of Confusion", "551d4a", false);
 	CustomPotion CONFUSION_SPLASH = new CustomPotion(PotionEffectType.CONFUSION, 600, 1, "Splash Potion of Confusion", "551d4a", true);
@@ -43,17 +43,16 @@ public class Main extends JavaPlugin implements Listener{
 	CustomPotion ANTIDOTE = new CustomPotion(PotionEffectType.DAMAGE_RESISTANCE, 100, 0, "Antidote", "ffffff", false);
 	CustomPotion ANTIDOTE_SPLASH = new CustomPotion(PotionEffectType.DAMAGE_RESISTANCE, 100, 0, "Throwable Antidote", "ffffff", true);
 	
+	ItemStack antidoteMeta = ANTIDOTE.MakePotion();
+	ItemStack splashAntidoteMeta = ANTIDOTE_SPLASH.MakePotion();
+	
 	public void onEnable() {
+		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		this.getServer().getPluginManager().registerEvents((Listener) new BrewListener(this), (Plugin) this);
-		this.getServer().getPluginManager().registerEvents((Listener) new PotionListener(), this);
-		Bukkit.getLogger().info("FraktalPotions " + VERSION + " activated!");
+		this.getServer().getPluginManager().registerEvents((Listener) new PotionListener(), (Plugin) this);
 		generateHashmap();
 	}
-	
-	public void onDisable() {
-		Bukkit.getLogger().info("FraktalPotions " + VERSION + " deactivated!");
-	}
-	
+
 	public void generateHashmap() {
 		recipes.put("WATER+SPIDER_EYE", CONFUSION);
 		recipes.put("CONFUSION+GUNPOWDER", CONFUSION_SPLASH);
