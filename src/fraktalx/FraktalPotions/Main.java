@@ -12,7 +12,6 @@ import org.bukkit.potion.PotionEffectType;
 
 public class Main extends JavaPlugin implements Listener{
 
-	//Material mat = Material.GLIS
 	Map<String, CustomPotion> recipes = new HashMap<String, CustomPotion>();
 	
 	//type, duration, potency, name, colour, splash
@@ -27,9 +26,6 @@ public class Main extends JavaPlugin implements Listener{
 	
 	CustomPotion ABSORPTION = new CustomPotion(PotionEffectType.ABSORPTION, 4800, 1, "Potion of Absorption", "2552a5", false);
 	CustomPotion ABSORPTION_SPLASH = new CustomPotion(PotionEffectType.ABSORPTION, 1200, 1, "Splash Potion of Absorption", "2552a5", true);
-	
-	CustomPotion HUNGER = new CustomPotion(PotionEffectType.HUNGER, 3000, 0, "Potion of Starvation", "587653", false);
-	CustomPotion HUNGER_SPLASH = new CustomPotion(PotionEffectType.HUNGER, 1000, 0, "Splash Potion of Starvation", "587653", true);
 	
 	CustomPotion HASTE = new CustomPotion(PotionEffectType.FAST_DIGGING, 9600, 1, "Potion of Haste", "d9c043", false);
 	CustomPotion HASTE_SPLASH = new CustomPotion(PotionEffectType.FAST_DIGGING, 2400, 1, "Splash Potion of Haste", "d9c043", true);
@@ -66,14 +62,11 @@ public class Main extends JavaPlugin implements Listener{
 		recipes.put("WATER+BLAZE_POWDER", ABSORPTION);
 		recipes.put("ABSORPTION+GUNPOWDER", ABSORPTION_SPLASH);
 		
-		recipes.put("WATER+SUGAR", HUNGER);
-		recipes.put("HUNGER+GUNPOWDER", HUNGER_SPLASH);
+		recipes.put("WATER+RESTONE", FATIGUE);
+		recipes.put("HUNGER+GUNPOWDER", FATIGUE_SPLASH);
 		
-		recipes.put("WATER+REDSTONE", HASTE);
+		recipes.put("WATER+SUGAR", HASTE);
 		recipes.put("FAST_DIGGING+GUNPOWDER", HASTE_SPLASH);
-		
-		recipes.put("WATER+FERMENTED_SPIDER_EYE", FATIGUE);
-		recipes.put("SLOW_DIGGING+GUNPOWDER", FATIGUE_SPLASH);
 		
 		recipes.put("WATER+GLOWSTONE_DUST", GLOWING);
 		recipes.put("GLOWING+GUNPOWDER", GLOWING_SPLASH);
