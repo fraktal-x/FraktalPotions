@@ -62,8 +62,8 @@ public class Main extends JavaPlugin implements Listener{
 		recipes.put("WATER+BLAZE_POWDER", ABSORPTION);
 		recipes.put("ABSORPTION+GUNPOWDER", ABSORPTION_SPLASH);
 		
-		recipes.put("WATER+RESTONE", FATIGUE);
-		recipes.put("HUNGER+GUNPOWDER", FATIGUE_SPLASH);
+		recipes.put("WATER+REDSTONE", FATIGUE);
+		recipes.put("SLOW_DIGGING+GUNPOWDER", FATIGUE_SPLASH);
 		
 		recipes.put("WATER+SUGAR", HASTE);
 		recipes.put("FAST_DIGGING+GUNPOWDER", HASTE_SPLASH);
