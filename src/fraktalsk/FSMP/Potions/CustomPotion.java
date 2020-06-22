@@ -1,4 +1,4 @@
-package fraktalx.FraktalPotions;
+package fraktalsk.FSMP.Potions;
 
 import org.bukkit.Color;
 import org.bukkit.Material;

@@ -1,4 +1,4 @@
-package fraktalx.FraktalPotions;
+package fraktalsk.FSMP.Potions;
 
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;

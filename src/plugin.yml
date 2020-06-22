@@ -1,9 +1,9 @@
-name: FraktalPotions
-description: FraktalPotions - the vanilla+ plugin!
-version: 1.2
-author: fraktalx
+name: FSMP-Potions
+description: The extended potions plugin for FSMP
+version: 2.0
+author: fraktalsk
 api-version: 1.15
 
-prefix: FraktalPotions
+prefix: FSMP-Potions
 
-main: fraktalx.FraktalPotions.Main
+main: fraktalsk.FSMP.Potions.Main

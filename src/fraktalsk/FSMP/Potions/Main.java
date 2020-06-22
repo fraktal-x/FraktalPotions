@@ -1,4 +1,4 @@
-package fraktalx.FraktalPotions;
+package fraktalsk.FSMP.Potions;
 
 import java.util.HashMap;
 import java.util.Map;
